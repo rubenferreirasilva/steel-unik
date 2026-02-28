@@ -19,9 +19,12 @@ export default function TrustBar() {
         </p>
       </div>
 
-      {/* Scrolling logos */}
+      {/* Scrolling logos — animation via Tailwind keyframes in globals.css */}
       <div className="relative flex overflow-hidden">
-        <div className="flex animate-[scroll_30s_linear_infinite] gap-16 whitespace-nowrap">
+        <div
+          className="flex gap-16 whitespace-nowrap"
+          style={{ animation: "trustbar-scroll 30s linear infinite" }}
+        >
           {[...clients, ...clients].map((client, i) => (
             <div
               key={`${client}-${i}`}
@@ -40,17 +43,6 @@ export default function TrustBar() {
           ))}
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
     </section>
   );
 }
