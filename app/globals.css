@@ -2,145 +2,238 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
+/* ============================================================
+   STEEL UNIK — DESIGN TOKENS
+   ============================================================ */
+:root {
+  /* Fundos */
+  --color-black:    #0D0D0F;
+  --color-dark:     #141418;
+  --color-surface:  #1C1C22;
+  --color-border:   #2A2A35;
 
+  /* Acento */
+  --color-accent:       #E8510A;
+  --color-accent-hover: #FF6B2B;
+  --color-accent-muted: #8C3005;
+  --color-accent-glow:  rgba(232, 81, 10, 0.15);
+
+  /* Texto */
+  --color-100: #E8EEF2;
+  --color-200: #C8D4DC;
+  --color-300: #A8B4C0;
+  --color-400: #8892A0;
+  --color-white: #F5F7FA;
+
+  /* Sombras */
+  --shadow-accent: 0 4px 32px rgba(232, 81, 10, 0.25);
+  --shadow-card:   0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-deep:   0 20px 60px rgba(0, 0, 0, 0.6);
+
+  /* Tipografia */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  scroll-behavior: smooth;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
 @layer base {
-  :root {
-    --accent: #2acbd2;
-    --accent-dark: #1fa8ae;
-    scroll-behavior: smooth;
-  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
-
-  html,
-  body {
+  html, body {
     max-width: 100vw;
     overflow-x: hidden;
-    background-color: #0d0d0d;
-    color: #f0f4f8;
+    background-color: var(--color-black);
+    color: var(--color-100);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: var(--font-display);
     letter-spacing: -0.02em;
+    line-height: 1.05;
   }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
 }
 
+/* ============================================================
+   COMPONENTES GLOBAIS
+   ============================================================ */
 @layer components {
+
+  /* Botões */
   .btn-primary {
-    @apply bg-steel-accent hover:bg-steel-accent-dark text-steel-dark font-bold px-8 py-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm inline-flex items-center gap-2;
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-sm font-semibold uppercase tracking-wider text-sm transition-all duration-200;
+    background: var(--color-accent);
+    color: #fff;
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
+    font-weight: 700;
+  }
+  .btn-primary:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-accent);
   }
 
   .btn-secondary {
-    @apply border border-steel-border hover:border-steel-accent text-steel-light hover:text-steel-accent font-semibold px-8 py-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm inline-flex items-center gap-2;
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-sm font-semibold uppercase tracking-wider text-sm transition-all duration-200;
+    border: 1px solid var(--color-border);
+    color: var(--color-100);
+    font-family: var(--font-display);
+    letter-spacing: 0.1em;
+    font-weight: 700;
+  }
+  .btn-secondary:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
   }
 
+  /* Labels de secção */
   .section-label {
-    @apply text-steel-accent font-semibold uppercase tracking-[0.2em] text-xs;
+    @apply block text-xs font-semibold uppercase;
+    color: var(--color-accent);
+    letter-spacing: 0.2em;
+    font-family: var(--font-body);
+  }
+  .section-label::before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 12px;
+    background: var(--color-accent);
+    margin-right: 10px;
+    vertical-align: middle;
   }
 
+  /* Títulos de secção */
   .section-title {
-    @apply font-heading font-bold text-steel-light leading-tight;
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--color-white);
+    line-height: 1.0;
+    letter-spacing: -0.02em;
   }
 
+  /* Cards */
   .card-dark {
-    @apply bg-steel-card border border-steel-border rounded-sm;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
   }
+  .card-dark::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #E8510A, #FF6B2B);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .card-dark:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-accent);
+  }
+  .card-dark:hover::before { transform: scaleX(1); }
 
-  .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  /* Container */
+  .container-custom { @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8; }
+
+  /* Input */
+  .input-dark {
+    @apply w-full px-4 py-3 text-sm rounded-sm transition-colors;
+    background: var(--color-black);
+    border: 1px solid var(--color-border);
+    color: var(--color-100);
+    font-family: var(--font-body);
+  }
+  .input-dark::placeholder { color: var(--color-400); }
+  .input-dark:focus {
+    outline: none;
+    border-color: var(--color-accent);
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .accent-glow {
-    box-shadow: 0 0 30px rgba(42, 203, 210, 0.12);
-  }
-
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, #1e2e2f, transparent);
-  }
-}
-
-/* Trust bar scroll animation */
+/* ============================================================
+   ANIMAÇÕES
+   ============================================================ */
 @keyframes trustbar-scroll {
-  0% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-::-webkit-scrollbar-track {
-  background: #0d0d0d;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-::-webkit-scrollbar-thumb {
-  background: #1e2e2f;
-  border-radius: 3px;
+@keyframes pulse-accent {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,81,10,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(232,81,10,0); }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #2acbd2;
-}
+.animate-fade-up   { animation: fadeUp 0.6s ease-out forwards; }
+.animate-fade-in   { animation: fadeIn 0.6s ease-out forwards; }
+.opacity-0-start   { opacity: 0; }
 
-/* WhatsApp floating button */
+/* Delays para stagger */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-700 { animation-delay: 0.7s; }
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-black); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+
+/* ============================================================
+   WHATSAPP
+   ============================================================ */
 .whatsapp-float {
   position: fixed;
-  bottom: 32px;
-  right: 32px;
+  bottom: 28px;
+  right: 28px;
   z-index: 9999;
   background: #25D366;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-  transition: all 0.3s ease;
-  animation: pulse-green 2s infinite;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: pulse-green 3s infinite;
 }
-
 .whatsapp-float:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+  transform: scale(1.08);
+  box-shadow: 0 6px 24px rgba(37,211,102,0.6);
 }
-
 @keyframes pulse-green {
-  0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-  50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
-}
-
-/* Intersection observer animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+  0%, 100% { box-shadow: 0 4px 16px rgba(37,211,102,0.4); }
+  50%       { box-shadow: 0 4px 24px rgba(37,211,102,0.6); }
 }

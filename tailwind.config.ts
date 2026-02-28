@@ -9,50 +9,51 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "steel-dark": "#0d0d0d",
-        "steel-darker": "#0a0a0a",
-        "steel-gray": "#1a1a1a",
-        "steel-card": "#141414",
-        "steel-border": "#1e2e2f",
-        "steel-muted": "#6b7280",
-        "steel-accent": "#2acbd2",
-        "steel-accent-dark": "#1fa8ae",
-        "steel-accent-light": "#4fd8de",
-        "steel-metal": "#8a9aaa",
-        "steel-light": "#f0f4f8",
+        /* Fundos */
+        "su-black":   "#0D0D0F",
+        "su-dark":    "#141418",
+        "su-surface": "#1C1C22",
+        "su-border":  "#2A2A35",
+        /* Acento laranja industrial */
+        "su-accent":       "#E8510A",
+        "su-accent-hover": "#FF6B2B",
+        "su-accent-muted": "#8C3005",
+        /* Texto / metal */
+        "su-100": "#E8EEF2",
+        "su-200": "#C8D4DC",
+        "su-300": "#A8B4C0",
+        "su-400": "#8892A0",
+        "su-white": "#F5F7FA",
+        /* Compat com classes antigas */
+        "steel-dark":    "#141418",
+        "steel-darker":  "#0D0D0F",
+        "steel-gray":    "#1C1C22",
+        "steel-card":    "#1C1C22",
+        "steel-border":  "#2A2A35",
+        "steel-muted":   "#8892A0",
+        "steel-accent":  "#E8510A",
+        "steel-accent-dark":  "#8C3005",
+        "steel-accent-light": "#FF6B2B",
+        "steel-metal":   "#A8B4C0",
+        "steel-light":   "#E8EEF2",
       },
       fontFamily: {
-        heading: ["var(--font-barlow)", "Barlow Condensed", "sans-serif"],
-        body: ["var(--font-dm-sans)", "DM Sans", "sans-serif"],
+        heading: ["'Barlow Condensed'", "sans-serif"],
+        body:    ["'Barlow'", "sans-serif"],
+        mono:    ["'DM Mono'", "monospace"],
+      },
+      fontSize: {
+        hero: "clamp(3rem, 8vw, 6rem)",
       },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "metal-gradient":
-          "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%)",
-        "accent-gradient":
-          "linear-gradient(135deg, #2acbd2 0%, #1fa8ae 100%)",
+        "gradient-accent": "linear-gradient(135deg, #E8510A 0%, #FF6B2B 100%)",
+        "gradient-hero":   "linear-gradient(135deg, #0D0D0F 0%, #1a1a24 50%, #0D0D0F 100%)",
+        "gradient-metal":  "linear-gradient(180deg, #2A2A35 0%, #1C1C22 100%)",
       },
-      animation: {
-        "fade-in": "fadeIn 0.6s ease-out forwards",
-        "fade-up": "fadeUp 0.6s ease-out forwards",
-        "slide-in": "slideIn 0.5s ease-out forwards",
-        "count-up": "countUp 2s ease-out forwards",
-      },
-      keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
-        },
-        fadeUp: {
-          "0%": { opacity: "0", transform: "translateY(30px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        slideIn: {
-          "0%": { transform: "translateX(-20px)", opacity: "0" },
-          "100%": { transform: "translateX(0)", opacity: "1" },
-        },
+      boxShadow: {
+        accent: "0 4px 32px rgba(232, 81, 10, 0.25)",
+        card:   "0 4px 24px rgba(0, 0, 0, 0.4)",
+        deep:   "0 20px 60px rgba(0, 0, 0, 0.6)",
       },
     },
   },

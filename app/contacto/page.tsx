@@ -8,14 +8,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Telefone Direto",
-    value: "+351 229 000 000",
-    href: "tel:+351229000000",
+    value: "+351 223 227 835",
+    href: "tel:+351223227835",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "geral@steelunik.com",
-    href: "mailto:geral@steelunik.com",
+    value: "ruben.silva@steelunik.com",
+    href: "mailto:ruben.silva@steelunik.com",
   },
   {
     icon: MapPin,
@@ -137,7 +137,7 @@ export default function ContactoPage() {
 
               {/* WhatsApp */}
               <a
-                href="https://wa.me/351229000000?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento."
+                href="https://wa.me/351223227835?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-[#25D366]/10 border border-[#25D366]/30 p-4 rounded-sm hover:bg-[#25D366]/20 transition-colors"

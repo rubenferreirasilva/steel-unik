@@ -39,8 +39,8 @@ export default function ContactCTA() {
 
             <div className="flex flex-col gap-4 mb-8">
               {[
-                { icon: Phone, label: "Telefone Direto", value: "+351 229 000 000", href: "tel:+351229000000" },
-                { icon: Mail, label: "Correio Eletrónico", value: "geral@steelunik.com", href: "mailto:geral@steelunik.com" },
+                { icon: Phone, label: "Telefone Direto", value: "+351 223 227 835", href: "tel:+351223227835" },
+                { icon: Mail, label: "Correio Eletrónico", value: "ruben.silva@steelunik.com", href: "mailto:ruben.silva@steelunik.com" },
                 { icon: Clock, label: "Horário", value: "Segunda–Sexta: 8h30–17h30", href: null },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-4 card-dark p-4">

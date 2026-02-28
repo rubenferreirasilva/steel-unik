@@ -11,8 +11,8 @@ export default function Hero() {
         className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(42,203,210,0.4) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(42,203,210,0.4) 1px, transparent 1px)
+            linear-gradient(rgba(232,81,10,0.3) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(232,81,10,0.3) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -107,25 +107,25 @@ export default function Hero() {
                 <div
                   className="absolute inset-0 opacity-10"
                   style={{
-                    backgroundImage: `linear-gradient(rgba(42,203,210,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(42,203,210,0.5) 1px, transparent 1px)`,
+                    backgroundImage: `linear-gradient(rgba(232,81,10,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(232,81,10,0.3) 1px, transparent 1px)`,
                     backgroundSize: "20px 20px",
                   }}
                 />
                 <div className="relative z-10 flex flex-col items-center gap-4">
                   <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                    <rect x="10" y="20" width="8" height="80" fill="#2acbd2" rx="1" />
-                    <rect x="102" y="20" width="8" height="80" fill="#2acbd2" rx="1" />
-                    <rect x="10" y="20" width="100" height="6" fill="#2acbd2" rx="1" />
-                    <rect x="10" y="94" width="100" height="6" fill="#2acbd2" rx="1" />
+                    <rect x="10" y="20" width="8" height="80" fill="#E8510A" rx="1" />
+                    <rect x="102" y="20" width="8" height="80" fill="#E8510A" rx="1" />
+                    <rect x="10" y="20" width="100" height="6" fill="#E8510A" rx="1" />
+                    <rect x="10" y="94" width="100" height="6" fill="#E8510A" rx="1" />
                     <rect x="18" y="44" width="84" height="4" fill="#8a9aaa" rx="1" opacity="0.8" />
                     <rect x="18" y="60" width="84" height="4" fill="#8a9aaa" rx="1" opacity="0.8" />
                     <rect x="18" y="76" width="84" height="4" fill="#8a9aaa" rx="1" opacity="0.8" />
-                    <circle cx="35" cy="38" r="4" stroke="#2acbd2" strokeWidth="2" fill="none" />
-                    <circle cx="60" cy="38" r="4" stroke="#2acbd2" strokeWidth="2" fill="none" />
-                    <circle cx="85" cy="38" r="4" stroke="#2acbd2" strokeWidth="2" fill="none" />
-                    <line x1="35" y1="34" x2="35" y2="26" stroke="#2acbd2" strokeWidth="2" />
-                    <line x1="60" y1="34" x2="60" y2="26" stroke="#2acbd2" strokeWidth="2" />
-                    <line x1="85" y1="34" x2="85" y2="26" stroke="#2acbd2" strokeWidth="2" />
+                    <circle cx="35" cy="38" r="4" stroke="#E8510A" strokeWidth="2" fill="none" />
+                    <circle cx="60" cy="38" r="4" stroke="#E8510A" strokeWidth="2" fill="none" />
+                    <circle cx="85" cy="38" r="4" stroke="#E8510A" strokeWidth="2" fill="none" />
+                    <line x1="35" y1="34" x2="35" y2="26" stroke="#E8510A" strokeWidth="2" />
+                    <line x1="60" y1="34" x2="60" y2="26" stroke="#E8510A" strokeWidth="2" />
+                    <line x1="85" y1="34" x2="85" y2="26" stroke="#E8510A" strokeWidth="2" />
                   </svg>
                   <div className="text-center">
                     <p className="text-steel-accent font-semibold text-sm uppercase tracking-wider">

@@ -1,7 +1,7 @@
 export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/351229000000?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20bastidores%20industriais."
+      href="https://wa.me/351223227835?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20bastidores%20industriais."
       target="_blank"
       rel="noopener noreferrer"
       className="whatsapp-float"

@@ -55,18 +55,18 @@ function ProjectPlaceholder({ id }: { id: number }) {
   return (
     <div className="w-full h-full flex items-center justify-center bg-steel-gray">
       <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <rect x="10" y="15" width="4" height="50" fill="#2acbd2" rx="1" opacity="0.8"/>
-        <rect x="66" y="15" width="4" height="50" fill="#2acbd2" rx="1" opacity="0.8"/>
-        <rect x="10" y="15" width="60" height="3" fill="#2acbd2" rx="1"/>
-        <rect x="10" y="62" width="60" height="3" fill="#2acbd2" rx="1"/>
-        <rect x="14" y="30" width="52" height="2" fill="#2acbd2" rx="1" opacity="0.5"/>
-        <rect x="14" y="42" width="52" height="2" fill="#2acbd2" rx="1" opacity="0.5"/>
-        <circle cx="25" cy="23" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
-        <circle cx="40" cy="23" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
-        <circle cx="55" cy="23" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
-        <line x1="25" y1="20" x2="25" y2="15" stroke="#2acbd2" strokeWidth="1.5"/>
-        <line x1="40" y1="20" x2="40" y2="15" stroke="#2acbd2" strokeWidth="1.5"/>
-        <line x1="55" y1="20" x2="55" y2="15" stroke="#2acbd2" strokeWidth="1.5"/>
+        <rect x="10" y="15" width="4" height="50" fill="#E8510A" rx="1" opacity="0.8"/>
+        <rect x="66" y="15" width="4" height="50" fill="#E8510A" rx="1" opacity="0.8"/>
+        <rect x="10" y="15" width="60" height="3" fill="#E8510A" rx="1"/>
+        <rect x="10" y="62" width="60" height="3" fill="#E8510A" rx="1"/>
+        <rect x="14" y="30" width="52" height="2" fill="#E8510A" rx="1" opacity="0.5"/>
+        <rect x="14" y="42" width="52" height="2" fill="#E8510A" rx="1" opacity="0.5"/>
+        <circle cx="25" cy="23" r="3" stroke="#E8510A" strokeWidth="1.5" fill="none"/>
+        <circle cx="40" cy="23" r="3" stroke="#E8510A" strokeWidth="1.5" fill="none"/>
+        <circle cx="55" cy="23" r="3" stroke="#E8510A" strokeWidth="1.5" fill="none"/>
+        <line x1="25" y1="20" x2="25" y2="15" stroke="#E8510A" strokeWidth="1.5"/>
+        <line x1="40" y1="20" x2="40" y2="15" stroke="#E8510A" strokeWidth="1.5"/>
+        <line x1="55" y1="20" x2="55" y2="15" stroke="#E8510A" strokeWidth="1.5"/>
       </svg>
     </div>
   );

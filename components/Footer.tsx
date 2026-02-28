@@ -48,19 +48,19 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Phone size={16} className="text-steel-accent flex-shrink-0" />
                 <a
-                  href="tel:+351229000000"
+                  href="tel:+351223227835"
                   className="text-steel-muted text-sm hover:text-white transition-colors"
                 >
-                  +351 229 000 000
+                  +351 223 227 835
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={16} className="text-steel-accent flex-shrink-0" />
                 <a
-                  href="mailto:geral@steelunik.com"
+                  href="mailto:ruben.silva@steelunik.com"
                   className="text-steel-muted text-sm hover:text-white transition-colors"
                 >
-                  geral@steelunik.com
+                  ruben.silva@steelunik.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
