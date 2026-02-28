@@ -6,7 +6,7 @@ export default function NotFound() {
     <div className="min-h-screen bg-steel-dark flex items-center justify-center">
       <div className="text-center px-4">
         <div
-          className="font-heading font-black text-steel-orange leading-none mb-4"
+          className="font-heading font-black text-steel-accent leading-none mb-4"
           style={{
             fontFamily: "'Barlow Condensed', sans-serif",
             fontSize: "clamp(6rem, 20vw, 15rem)",

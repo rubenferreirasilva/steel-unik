@@ -24,8 +24,8 @@ const sectors = [
     ],
     solution:
       "30 anos de experiência exclusiva no automóvel. Processo de prototipagem validado. Clientes que não mudam de fornecedor porque não querem arriscar.",
-    clients: ["Caetano Coating", "SMP", "Novacoating", "Fesht Componentes", "Aludec Portugal", "Doureca", "Prettl", "Preh Portugal"],
-    color: "steel-orange",
+    clients: ["Caetano Coating", "SMP", "Fesht Componentes", "Aludec Portugal", "Doureca", "Prettl", "Preh Portugal"],
+    color: "steel-accent",
   },
   {
     id: "powder-coating",
@@ -142,7 +142,7 @@ export default function SetoresPage() {
           >
             SERVIMOS MÚLTIPLOS
             <br />
-            <span className="text-steel-orange">SETORES INDUSTRIAIS</span>
+            <span className="text-steel-accent">SETORES INDUSTRIAIS</span>
           </h1>
           <p className="text-steel-muted text-lg max-w-2xl leading-relaxed">
             O rigor do setor automóvel é o nosso standard mínimo — e aplicamos-o
@@ -167,7 +167,7 @@ export default function SetoresPage() {
                 <div className="flex items-center gap-3 mb-4">
                   <p className="section-label">0{index + 1}</p>
                   {sector.badge && (
-                    <span className="bg-steel-orange text-white text-xs px-2 py-1 rounded-sm font-bold uppercase tracking-wider">
+                    <span className="bg-steel-accent text-white text-xs px-2 py-1 rounded-sm font-bold uppercase tracking-wider">
                       {sector.badge}
                     </span>
                   )}
@@ -178,7 +178,7 @@ export default function SetoresPage() {
                 >
                   {sector.name.toUpperCase()}
                 </h2>
-                <p className="text-steel-orange font-semibold text-base mb-6">
+                <p className="text-steel-accent font-semibold text-base mb-6">
                   {sector.headline}
                 </p>
                 <p className="text-steel-muted text-base leading-relaxed mb-8">
@@ -229,15 +229,15 @@ export default function SetoresPage() {
                 </div>
 
                 {/* Solution */}
-                <div className="bg-steel-orange/10 border border-steel-orange/30 p-6 rounded-sm">
+                <div className="bg-steel-accent/10 border border-steel-accent/30 p-6 rounded-sm">
                   <h3
-                    className="text-steel-orange font-bold text-lg mb-3 uppercase tracking-wider"
+                    className="text-steel-accent font-bold text-lg mb-3 uppercase tracking-wider"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                   >
                     A Nossa Solução
                   </h3>
                   <div className="flex items-start gap-3">
-                    <CheckCircle size={18} className="text-steel-orange mt-0.5 flex-shrink-0" />
+                    <CheckCircle size={18} className="text-steel-accent mt-0.5 flex-shrink-0" />
                     <p className="text-steel-muted text-sm leading-relaxed">
                       {sector.solution}
                     </p>
@@ -250,7 +250,7 @@ export default function SetoresPage() {
       ))}
 
       {/* CTA */}
-      <section className="bg-steel-orange py-16">
+      <section className="bg-steel-accent py-16">
         <div className="container-custom text-center">
           <h2
             className="text-white font-black text-4xl md:text-5xl mb-4"
@@ -264,7 +264,7 @@ export default function SetoresPage() {
           </p>
           <Link
             href="/contacto"
-            className="bg-white text-steel-orange font-bold px-8 py-4 rounded-sm hover:bg-steel-light transition-colors inline-flex items-center gap-2 uppercase tracking-wider text-sm"
+            className="bg-white text-steel-accent font-bold px-8 py-4 rounded-sm hover:bg-steel-light transition-colors inline-flex items-center gap-2 uppercase tracking-wider text-sm"
           >
             Falar com um Técnico
             <ArrowRight size={16} />

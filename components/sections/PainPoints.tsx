@@ -13,13 +13,13 @@ const problems = [
     icon: Clock,
     title: "Fornecedores sem capacidade de prototipagem rápida",
     description:
-      "Esperar semanas por um protótipo e depois descobrir que não funciona na linha. Perdas de tempo e de produção que poderiam ter sido evitadas desde o início.",
+      "Esperar semanas por um protótipo e descobrir que não funciona na linha. Perdas de tempo e de produção que podiam ter sido evitadas logo no início.",
   },
   {
     icon: Layers,
     title: "Falta de flexibilidade para pequenas e grandes séries",
     description:
-      "Fornecedores que só trabalham grandes volumes — ou pequenas produções artesanais sem controlo de qualidade. O mercado exige ambas as realidades em simultâneo.",
+      "Fornecedores que só trabalham grandes volumes — ou produções artesanais sem controlo de qualidade. O mercado exige ambas as realidades em simultâneo.",
   },
 ];
 
@@ -36,26 +36,29 @@ export default function PainPoints() {
           >
             O QUE CUSTA CARO
             <br />
-            <span className="text-steel-orange">AO SEU NEGÓCIO</span>
+            <span className="text-steel-accent">AO SEU NEGÓCIO</span>
           </h2>
           <p className="text-steel-muted text-base leading-relaxed">
-            Engenheiros e responsáveis de produção confrontam-se todos os dias
+            Engenheiros e responsáveis de produção confrontam-se diariamente
             com os mesmos desafios nos bastidores das suas linhas de pintura.
           </p>
         </div>
 
-        {/* Problem cards */}
+        {/* Cards de problema */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {problems.map((problem, index) => (
             <div
               key={problem.title}
-              className="group card-dark p-8 hover:border-steel-orange/50 transition-all duration-300"
+              className="group card-dark p-8 hover:border-steel-accent/50 transition-all duration-300"
             >
               <div className="flex items-start gap-4 mb-4">
                 <div className="w-12 h-12 rounded-sm bg-red-500/10 border border-red-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/20 transition-colors">
                   <problem.icon size={20} className="text-red-400" />
                 </div>
-                <span className="text-steel-orange font-heading font-bold text-4xl opacity-20 group-hover:opacity-40 transition-opacity" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                <span
+                  className="text-steel-accent font-heading font-bold text-4xl opacity-20 group-hover:opacity-40 transition-opacity"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
                   0{index + 1}
                 </span>
               </div>
@@ -72,9 +75,9 @@ export default function PainPoints() {
           ))}
         </div>
 
-        {/* Transition CTA */}
-        <div className="bg-steel-gray border border-steel-orange/20 rounded-sm p-8 text-center orange-glow">
-          <p className="text-steel-orange text-xs font-semibold uppercase tracking-[0.3em] mb-3">
+        {/* Transição */}
+        <div className="bg-steel-gray border border-steel-accent/20 rounded-sm p-8 text-center accent-glow">
+          <p className="text-steel-accent text-xs font-semibold uppercase tracking-[0.3em] mb-3">
             A Nossa Resposta
           </p>
           <h3
@@ -84,9 +87,9 @@ export default function PainPoints() {
             A Steel Unik foi construída para resolver exatamente isto.
           </h3>
           <p className="text-steel-muted text-base max-w-2xl mx-auto">
-            30 anos de know-how, produção 100% interna e processo de
-            prototipagem validado — para que as suas linhas nunca parem por
-            causa de um bastidor.
+            30 anos de know-how, produção 100% interna e um processo de
+            prototipagem validado — para que as suas linhas nunca parem
+            por causa de um bastidor.
           </p>
         </div>
       </div>

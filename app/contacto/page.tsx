@@ -66,7 +66,7 @@ export default function ContactoPage() {
           >
             VAMOS TRABALHAR
             <br />
-            <span className="text-steel-orange">JUNTOS.</span>
+            <span className="text-steel-accent">JUNTOS.</span>
           </h1>
           <p className="text-steel-muted text-lg max-w-xl leading-relaxed">
             Pode enviar-nos a peça por CAD, foto ou descrição. Respondemos com
@@ -91,8 +91,8 @@ export default function ContactoPage() {
               <div className="flex flex-col gap-4 mb-10">
                 {contactInfo.map((info) => (
                   <div key={info.label} className="card-dark p-5 flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-sm bg-steel-orange/10 border border-steel-orange/20 flex items-center justify-center flex-shrink-0">
-                      <info.icon size={20} className="text-steel-orange" />
+                    <div className="w-12 h-12 rounded-sm bg-steel-accent/10 border border-steel-accent/20 flex items-center justify-center flex-shrink-0">
+                      <info.icon size={20} className="text-steel-accent" />
                     </div>
                     <div>
                       <p className="text-steel-muted text-xs uppercase tracking-wider mb-1">
@@ -103,7 +103,7 @@ export default function ContactoPage() {
                           href={info.href}
                           target={info.href.startsWith("http") ? "_blank" : undefined}
                           rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="text-white font-semibold hover:text-steel-orange transition-colors text-sm"
+                          className="text-white font-semibold hover:text-steel-accent transition-colors text-sm"
                         >
                           {info.value}
                         </a>
@@ -118,7 +118,7 @@ export default function ContactoPage() {
               {/* Map placeholder */}
               <div className="card-dark aspect-video flex items-center justify-center mb-6">
                 <div className="text-center">
-                  <MapPin size={40} className="text-steel-orange mx-auto mb-3" />
+                  <MapPin size={40} className="text-steel-accent mx-auto mb-3" />
                   <p className="text-white font-semibold mb-1">Steel Unik</p>
                   <p className="text-steel-muted text-sm">
                     Rua António da Silva Torres 100
@@ -128,7 +128,7 @@ export default function ContactoPage() {
                     href="https://maps.google.com/?q=Rua+António+da+Silva+Torres+100+Maia"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-steel-orange text-sm hover:underline"
+                    className="text-steel-accent text-sm hover:underline"
                   >
                     Abrir no Google Maps →
                   </a>
@@ -160,7 +160,7 @@ export default function ContactoPage() {
             <div className="card-dark p-8">
               {submitted ? (
                 <div className="text-center py-16">
-                  <CheckCircle size={64} className="text-steel-orange mx-auto mb-6" />
+                  <CheckCircle size={64} className="text-steel-accent mx-auto mb-6" />
                   <h3
                     className="text-white font-black text-3xl mb-3"
                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
@@ -173,7 +173,7 @@ export default function ContactoPage() {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-8 text-steel-orange text-sm hover:underline"
+                    className="mt-8 text-steel-accent text-sm hover:underline"
                   >
                     Enviar outro pedido
                   </button>
@@ -200,7 +200,7 @@ export default function ContactoPage() {
                       <input
                         type="text"
                         required
-                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-orange transition-colors placeholder:text-steel-muted"
+                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-accent transition-colors placeholder:text-steel-muted"
                         placeholder="João Silva"
                       />
                     </div>
@@ -211,7 +211,7 @@ export default function ContactoPage() {
                       <input
                         type="text"
                         required
-                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-orange transition-colors placeholder:text-steel-muted"
+                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-accent transition-colors placeholder:text-steel-muted"
                         placeholder="Empresa, S.A."
                       />
                     </div>
@@ -225,7 +225,7 @@ export default function ContactoPage() {
                       <input
                         type="email"
                         required
-                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-orange transition-colors placeholder:text-steel-muted"
+                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-accent transition-colors placeholder:text-steel-muted"
                         placeholder="joao@empresa.pt"
                       />
                     </div>
@@ -235,7 +235,7 @@ export default function ContactoPage() {
                       </label>
                       <input
                         type="tel"
-                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-orange transition-colors placeholder:text-steel-muted"
+                        className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-accent transition-colors placeholder:text-steel-muted"
                         placeholder="+351 9XX XXX XXX"
                       />
                     </div>
@@ -245,7 +245,7 @@ export default function ContactoPage() {
                     <label className="text-steel-muted text-xs uppercase tracking-wider block mb-1.5">
                       Setor / Processo
                     </label>
-                    <select className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-orange transition-colors">
+                    <select className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-accent transition-colors">
                       <option value="">Selecione o setor...</option>
                       <option>Indústria Automóvel</option>
                       <option>Powder Coating</option>
@@ -263,7 +263,7 @@ export default function ContactoPage() {
                     <textarea
                       required
                       rows={5}
-                      className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-orange transition-colors placeholder:text-steel-muted resize-none"
+                      className="w-full bg-steel-gray border border-steel-border text-white px-4 py-3 text-sm rounded-sm focus:outline-none focus:border-steel-accent transition-colors placeholder:text-steel-muted resize-none"
                       placeholder="Descreva o bastidor que necessita — tipo de peça, processo de pintura, quantidade estimada, prazo, requisitos especiais..."
                     />
                   </div>
@@ -273,11 +273,11 @@ export default function ContactoPage() {
                     <label className="text-steel-muted text-xs uppercase tracking-wider block mb-1.5">
                       Ficheiro Técnico (CAD, DXF, STEP, STP, PDF, Foto)
                     </label>
-                    <label className="flex items-center gap-3 w-full bg-steel-gray border border-dashed border-steel-border text-steel-muted px-4 py-4 text-sm rounded-sm hover:border-steel-orange hover:text-white transition-colors cursor-pointer">
+                    <label className="flex items-center gap-3 w-full bg-steel-gray border border-dashed border-steel-border text-steel-muted px-4 py-4 text-sm rounded-sm hover:border-steel-accent hover:text-white transition-colors cursor-pointer">
                       <Upload size={18} className="flex-shrink-0" />
                       <span>
                         {selectedFile ? (
-                          <span className="text-steel-orange">{selectedFile}</span>
+                          <span className="text-steel-accent">{selectedFile}</span>
                         ) : (
                           "Clique para anexar ficheiro técnico"
                         )}

@@ -13,11 +13,11 @@ const config: Config = {
         "steel-darker": "#0a0a0a",
         "steel-gray": "#1a1a1a",
         "steel-card": "#141414",
-        "steel-border": "#2a2a2a",
+        "steel-border": "#1e2e2f",
         "steel-muted": "#6b7280",
-        "steel-orange": "#FF6B35",
-        "steel-orange-dark": "#e55a25",
-        "steel-orange-light": "#ff8555",
+        "steel-accent": "#2acbd2",
+        "steel-accent-dark": "#1fa8ae",
+        "steel-accent-light": "#4fd8de",
         "steel-metal": "#8a9aaa",
         "steel-light": "#f0f4f8",
       },
@@ -31,8 +31,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "metal-gradient":
           "linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%)",
-        "orange-gradient":
-          "linear-gradient(135deg, #FF6B35 0%, #e55a25 100%)",
+        "accent-gradient":
+          "linear-gradient(135deg, #2acbd2 0%, #1fa8ae 100%)",
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-out forwards",

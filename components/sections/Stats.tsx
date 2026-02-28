@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const stats = [
   { value: 30, suffix: "+", label: "Anos de Experiência", detail: "desde 1994" },
   { value: 50, suffix: "+", label: "Clientes Ativos", detail: "Portugal e Espanha" },
-  { value: 10000, suffix: "+", label: "Bastidores Produzidos", detail: "e contando" },
+  { value: 10000, suffix: "+", label: "Bastidores Produzidos", detail: "e a contar" },
   { value: 2, suffix: "", label: "Países Servidos", detail: "Portugal & Espanha" },
 ];
 
@@ -59,9 +59,9 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="bg-steel-orange py-20 relative overflow-hidden"
+      className="bg-steel-accent py-20 relative overflow-hidden"
     >
-      {/* Background texture */}
+      {/* Textura de fundo */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -75,11 +75,11 @@ export default function Stats() {
 
       <div className="container-custom relative z-10">
         <div className="text-center mb-12">
-          <p className="text-white/70 text-xs uppercase tracking-[0.3em] font-semibold mb-2">
+          <p className="text-steel-dark/60 text-xs uppercase tracking-[0.3em] font-semibold mb-2">
             Em números
           </p>
           <h2
-            className="text-white font-black text-4xl md:text-5xl"
+            className="text-steel-dark font-black text-4xl md:text-5xl"
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             30 ANOS DE RESULTADOS REAIS
@@ -90,7 +90,7 @@ export default function Stats() {
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div
-                className="font-heading font-black text-white leading-none mb-2"
+                className="font-heading font-black text-steel-dark leading-none mb-2"
                 style={{
                   fontFamily: "'Barlow Condensed', sans-serif",
                   fontSize: "clamp(3rem, 6vw, 5rem)",
@@ -98,11 +98,13 @@ export default function Stats() {
               >
                 <CountUp value={stat.value} suffix={stat.suffix} active={isVisible} />
               </div>
-              <div className="text-white font-bold text-base uppercase tracking-wider mb-1"
-                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+              <div
+                className="text-steel-dark font-bold text-base uppercase tracking-wider mb-1"
+                style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+              >
                 {stat.label}
               </div>
-              <div className="text-white/60 text-xs">{stat.detail}</div>
+              <div className="text-steel-dark/60 text-xs">{stat.detail}</div>
             </div>
           ))}
         </div>

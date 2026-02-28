@@ -10,7 +10,7 @@ const navLinks = [
     label: "Serviços",
     href: "/servicos",
     children: [
-      { label: "Desenvolvimento de Jigs", href: "/servicos#jigs" },
+      { label: "Desenvolvimento de Bastidores", href: "/servicos#bastidores" },
       { label: "Prototipagem CAD", href: "/servicos#cad" },
       { label: "Soldadura", href: "/servicos#soldadura" },
       { label: "Laser Corte", href: "/servicos#laser" },
@@ -50,7 +50,7 @@ export default function Navbar() {
                 className="font-heading font-black text-2xl text-white uppercase tracking-tight leading-none"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
-                STEEL<span className="text-steel-orange">UNIK</span>
+                STEEL<span className="text-steel-accent">UNIK</span>
               </span>
               <span className="text-[9px] text-steel-metal uppercase tracking-[0.25em] leading-none mt-0.5">
                 Bastidores Industriais
@@ -82,7 +82,7 @@ export default function Navbar() {
 
                 {link.children && activeDropdown === link.label && (
                   <div
-                    className="absolute top-full left-0 mt-2 w-56 bg-steel-gray border border-steel-border rounded-sm shadow-xl py-2"
+                    className="absolute top-full left-0 mt-2 w-64 bg-steel-gray border border-steel-border rounded-sm shadow-xl py-2"
                     onMouseEnter={() => setActiveDropdown(link.label)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
@@ -103,10 +103,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-4">
-            <Link
-              href="/contacto"
-              className="btn-primary text-xs px-6 py-3"
-            >
+            <Link href="/contacto" className="btn-primary text-xs px-6 py-3">
               Solicitar Orçamento
             </Link>
           </div>

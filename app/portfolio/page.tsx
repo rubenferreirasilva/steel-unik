@@ -91,26 +91,26 @@ const projects = [
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
   return (
-    <div className="group card-dark overflow-hidden hover:border-steel-orange/40 transition-all duration-300">
+    <div className="group card-dark overflow-hidden hover:border-steel-accent/40 transition-all duration-300">
       {/* Image placeholder */}
       <div className="aspect-[4/3] bg-steel-gray relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-            <rect x="8" y="12" width="4" height="56" fill="#FF6B35" rx="1" opacity="0.8"/>
-            <rect x="68" y="12" width="4" height="56" fill="#FF6B35" rx="1" opacity="0.8"/>
-            <rect x="8" y="12" width="64" height="4" fill="#FF6B35" rx="1"/>
-            <rect x="8" y="64" width="64" height="4" fill="#FF6B35" rx="1"/>
+            <rect x="8" y="12" width="4" height="56" fill="#2acbd2" rx="1" opacity="0.8"/>
+            <rect x="68" y="12" width="4" height="56" fill="#2acbd2" rx="1" opacity="0.8"/>
+            <rect x="8" y="12" width="64" height="4" fill="#2acbd2" rx="1"/>
+            <rect x="8" y="64" width="64" height="4" fill="#2acbd2" rx="1"/>
             <rect x="12" y="28" width="56" height="2" fill="#8a9aaa" rx="1" opacity="0.6"/>
             <rect x="12" y="40" width="56" height="2" fill="#8a9aaa" rx="1" opacity="0.6"/>
             <rect x="12" y="52" width="56" height="2" fill="#8a9aaa" rx="1" opacity="0.6"/>
-            <circle cx="24" cy="20" r="3" stroke="#FF6B35" strokeWidth="1.5" fill="none"/>
-            <circle cx="40" cy="20" r="3" stroke="#FF6B35" strokeWidth="1.5" fill="none"/>
-            <circle cx="56" cy="20" r="3" stroke="#FF6B35" strokeWidth="1.5" fill="none"/>
+            <circle cx="24" cy="20" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
+            <circle cx="40" cy="20" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
+            <circle cx="56" cy="20" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
           </svg>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-steel-card via-transparent to-transparent opacity-60" />
         <div className="absolute top-3 left-3 flex gap-2">
-          <span className="bg-steel-orange text-white text-xs px-2 py-1 rounded-sm font-bold uppercase tracking-wider">
+          <span className="bg-steel-accent text-white text-xs px-2 py-1 rounded-sm font-bold uppercase tracking-wider">
             {project.category}
           </span>
         </div>
@@ -119,12 +119,12 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
       {/* Content */}
       <div className="p-6">
         <h3
-          className="text-white font-bold text-lg mb-1 leading-tight group-hover:text-steel-orange transition-colors"
+          className="text-white font-bold text-lg mb-1 leading-tight group-hover:text-steel-accent transition-colors"
           style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
         >
           {project.title}
         </h3>
-        <p className="text-steel-orange text-xs font-semibold mb-3">{project.client}</p>
+        <p className="text-steel-accent text-xs font-semibold mb-3">{project.client}</p>
         <p className="text-steel-muted text-sm leading-relaxed mb-4">
           {project.description}
         </p>
@@ -183,7 +183,7 @@ export default function PortfolioPage() {
           >
             TRABALHOS
             <br />
-            <span className="text-steel-orange">REALIZADOS</span>
+            <span className="text-steel-accent">REALIZADOS</span>
           </h1>
           <p className="text-steel-muted text-lg max-w-xl leading-relaxed">
             A melhor forma de avaliar um fornecedor é ver o trabalho que já fez.
@@ -203,8 +203,8 @@ export default function PortfolioPage() {
                 onClick={() => setActiveFilter(filter)}
                 className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-sm border transition-all duration-200 ${
                   activeFilter === filter
-                    ? "bg-steel-orange border-steel-orange text-white"
-                    : "border-steel-border text-steel-muted hover:border-steel-orange/50 hover:text-white"
+                    ? "bg-steel-accent border-steel-accent text-white"
+                    : "border-steel-border text-steel-muted hover:border-steel-accent/50 hover:text-white"
                 }`}
               >
                 {filter}
@@ -238,7 +238,7 @@ export default function PortfolioPage() {
             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
           >
             QUER UM PROJETO{" "}
-            <span className="text-steel-orange">COMO ESTE?</span>
+            <span className="text-steel-accent">COMO ESTE?</span>
           </h2>
           <p className="text-steel-muted text-base mb-8 max-w-xl mx-auto">
             Envie-nos a especificação e receba proposta em 24 horas. O protótipo

@@ -6,7 +6,7 @@ const sectors = [
     name: "Indústria Automóvel",
     badge: "Principal",
     description:
-      "Fornecedor Tier 1 e Tier 2 para as maiores linhas de pintura automóvel ibéricas. Experiência com todos os principais OEMs e fornecedores.",
+      "Fornecedor Tier 1 e Tier 2 para as maiores linhas de pintura automóvel da Península Ibérica. Experiência com todos os principais OEM e fornecedores de primeiro nível.",
     clients: "Caetano Coating, SMP, Aludec, Prettl, Preh",
     href: "/setores#automovel",
     featured: true,
@@ -15,7 +15,7 @@ const sectors = [
     name: "Powder Coating",
     badge: null,
     description:
-      "Bastidores para pintura a pó — resistência à temperatura até 220°C, geometrias otimizadas para cobertura uniforme.",
+      "Bastidores para pintura a pó — resistência à temperatura até 220 °C, geometrias optimizadas para cobertura uniforme.",
     clients: "Múltiplos setores",
     href: "/setores#powder-coating",
     featured: false,
@@ -24,7 +24,7 @@ const sectors = [
     name: "Cromagem Industrial",
     badge: null,
     description:
-      "Racks para banhos de cromagem — materiais compatíveis, condutividade garantida, resistência química aos eletrólitos.",
+      "Bastidores para banhos de cromagem — materiais compatíveis, condutividade garantida, resistência química aos eletrólitos.",
     clients: "Decorativo e funcional",
     href: "/setores#cromagem",
     featured: false,
@@ -33,7 +33,7 @@ const sectors = [
     name: "Anodização",
     badge: null,
     description:
-      "Jigs em titânio e alumínio para processos de anodização — contacto elétrico perfeito, sem marcas nas peças.",
+      "Bastidores em titânio e alumínio para processos de anodização — contacto elétrico perfeito, sem marcas nas peças.",
     clients: "Alumínio e perfis",
     href: "/setores#anodizacao",
     featured: false,
@@ -71,7 +71,7 @@ export default function Sectors() {
           >
             SERVIMOS MÚLTIPLOS
             <br />
-            <span className="text-steel-orange">SETORES INDUSTRIAIS</span>
+            <span className="text-steel-accent">SETORES INDUSTRIAIS</span>
           </h2>
           <p className="text-steel-muted text-base leading-relaxed">
             A nossa experiência no automóvel garante o rigor técnico que todos
@@ -80,19 +80,19 @@ export default function Sectors() {
           </p>
         </div>
 
-        {/* Sectors grid */}
+        {/* Grelha de setores */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {sectors.map((sector) => (
             <Link
               key={sector.name}
               href={sector.href}
-              className={`group card-dark p-6 hover:border-steel-orange/40 transition-all duration-300 block ${
-                sector.featured ? "lg:col-span-1 border-steel-orange/30 bg-steel-orange/5" : ""
+              className={`group card-dark p-6 hover:border-steel-accent/40 transition-all duration-300 block ${
+                sector.featured ? "border-steel-accent/30 bg-steel-accent/5" : ""
               }`}
             >
               <div className="flex items-start justify-between mb-4">
                 <h3
-                  className="text-white font-bold text-xl group-hover:text-steel-orange transition-colors leading-tight"
+                  className="text-white font-bold text-xl group-hover:text-steel-accent transition-colors leading-tight"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
                   {sector.name}
@@ -101,7 +101,7 @@ export default function Sectors() {
                   <span
                     className={`text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-sm flex-shrink-0 ml-2 ${
                       sector.featured
-                        ? "bg-steel-orange text-white"
+                        ? "bg-steel-accent text-steel-dark"
                         : "bg-steel-gray text-steel-muted border border-steel-border"
                     }`}
                   >
@@ -116,10 +116,7 @@ export default function Sectors() {
 
               <div className="flex items-center justify-between">
                 <span className="text-steel-metal text-xs">{sector.clients}</span>
-                <ArrowRight
-                  size={16}
-                  className="text-steel-orange opacity-0 group-hover:opacity-100 transition-opacity"
-                />
+                <ArrowRight size={16} className="text-steel-accent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
             </Link>
           ))}

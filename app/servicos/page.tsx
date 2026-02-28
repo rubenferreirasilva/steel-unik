@@ -3,17 +3,17 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Serviços — Desenvolvimento de Jigs, Soldadura, Laser Corte",
+  title: "Serviços — Desenvolvimento de Bastidores, Soldadura, Laser Corte",
   description:
-    "Capacidades técnicas da Steel Unik: desenvolvimento de jigs/bastidores, prototipagem CAD/SolidWorks, soldadura especializada, laser corte, fresagem, quinagem e torno.",
+    "Capacidades técnicas da Steel Unik: desenvolvimento de bastidores, prototipagem CAD/SolidWorks, soldadura especializada, laser corte, fresagem, quinagem e torno.",
 };
 
 const services = [
   {
-    id: "jigs",
-    title: "Desenvolvimento de Jigs & Bastidores",
+    id: "bastidores",
+    title: "Desenvolvimento de Bastidores",
     subtitle: "O nosso core — 30 anos de especialização",
-    description: `O desenvolvimento de jigs e bastidores industriais é a nossa especialidade principal. Com 30 anos de experiência acumulada, desenvolvemos bastidores para qualquer processo de tratamento de superfície — pintura líquida, powder coating, cromagem, anodização e cataforese.
+    description: `O desenvolvimento de bastidores industriais é a nossa especialidade principal. Com 30 anos de experiência acumulada, desenvolvemos bastidores para qualquer processo de tratamento de superfície — pintura líquida, powder coating, cromagem, anodização e cataforese.
 
 Cada bastidor é desenvolvido com base nas especificações exatas do cliente: geometria da peça, pontos de suspensão, capacidade de carga, compatibilidade com o processo químico e requisitos de condutividade elétrica quando aplicável.`,
     specs: [
@@ -109,7 +109,7 @@ export default function ServicosPage() {
           >
             CAPACIDADES TÉCNICAS
             <br />
-            <span className="text-steel-orange">100% INTERNAS</span>
+            <span className="text-steel-accent">100% INTERNAS</span>
           </h1>
           <p className="text-steel-muted text-lg max-w-2xl leading-relaxed">
             Desde o CAD até à peça final — sem outsourcing, sem intermediários.
@@ -139,7 +139,7 @@ export default function ServicosPage() {
                   >
                     {service.title}
                   </h2>
-                  <p className="text-steel-orange font-semibold text-sm uppercase tracking-wider mb-6">
+                  <p className="text-steel-accent font-semibold text-sm uppercase tracking-wider mb-6">
                     {service.subtitle}
                   </p>
                   <div className="text-steel-muted text-base leading-relaxed mb-8 whitespace-pre-line">
@@ -155,7 +155,7 @@ export default function ServicosPage() {
                 <div className={index % 2 === 0 ? "order-2" : "order-2 lg:order-1"}>
                   <div className="card-dark p-8 h-full">
                     <h3
-                      className="text-steel-orange font-bold text-lg mb-6 uppercase tracking-wider"
+                      className="text-steel-accent font-bold text-lg mb-6 uppercase tracking-wider"
                       style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                     >
                       Especificações Técnicas
@@ -166,7 +166,7 @@ export default function ServicosPage() {
                           key={spec}
                           className="flex items-start gap-3 text-steel-muted text-sm"
                         >
-                          <span className="text-steel-orange font-bold mt-0.5 flex-shrink-0">
+                          <span className="text-steel-accent font-bold mt-0.5 flex-shrink-0">
                             →
                           </span>
                           {spec}
@@ -177,7 +177,7 @@ export default function ServicosPage() {
                     {/* Visual placeholder */}
                     <div className="mt-8 aspect-video bg-steel-gray border border-steel-border rounded-sm flex items-center justify-center">
                       <div className="text-center">
-                        <div className="text-steel-orange text-4xl mb-2">⚙</div>
+                        <div className="text-steel-accent text-4xl mb-2">⚙</div>
                         <p className="text-steel-muted text-xs">
                           Foto do processo em breve
                         </p>
@@ -192,7 +192,7 @@ export default function ServicosPage() {
       </div>
 
       {/* CTA Bottom */}
-      <section className="bg-steel-orange py-16">
+      <section className="bg-steel-accent py-16">
         <div className="container-custom text-center">
           <h2
             className="text-white font-black text-4xl md:text-5xl mb-4"
@@ -206,7 +206,7 @@ export default function ServicosPage() {
           </p>
           <Link
             href="/contacto"
-            className="bg-white text-steel-orange font-bold px-8 py-4 rounded-sm hover:bg-steel-light transition-colors inline-flex items-center gap-2 uppercase tracking-wider text-sm"
+            className="bg-white text-steel-accent font-bold px-8 py-4 rounded-sm hover:bg-steel-light transition-colors inline-flex items-center gap-2 uppercase tracking-wider text-sm"
           >
             Solicitar Orçamento
             <ArrowRight size={16} />

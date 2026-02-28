@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap');
 
 @layer base {
   :root {
-    --font-barlow: 'Barlow Condensed', sans-serif;
-    --font-dm-sans: 'DM Sans', sans-serif;
+    --accent: #2acbd2;
+    --accent-dark: #1fa8ae;
     scroll-behavior: smooth;
   }
 
@@ -42,15 +42,15 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-steel-orange hover:bg-steel-orange-dark text-white font-semibold px-8 py-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm inline-flex items-center gap-2;
+    @apply bg-steel-accent hover:bg-steel-accent-dark text-steel-dark font-bold px-8 py-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm inline-flex items-center gap-2;
   }
 
   .btn-secondary {
-    @apply border border-steel-border hover:border-steel-orange text-steel-light hover:text-steel-orange font-semibold px-8 py-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm inline-flex items-center gap-2;
+    @apply border border-steel-border hover:border-steel-accent text-steel-light hover:text-steel-accent font-semibold px-8 py-4 rounded-sm transition-all duration-200 uppercase tracking-wider text-sm inline-flex items-center gap-2;
   }
 
   .section-label {
-    @apply text-steel-orange font-semibold uppercase tracking-[0.2em] text-xs;
+    @apply text-steel-accent font-semibold uppercase tracking-[0.2em] text-xs;
   }
 
   .section-title {
@@ -71,17 +71,13 @@
     text-wrap: balance;
   }
 
-  .metal-shine {
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 40%, #2a2a2a 60%, #1a1a1a 100%);
-  }
-
-  .orange-glow {
-    box-shadow: 0 0 30px rgba(255, 107, 53, 0.15);
+  .accent-glow {
+    box-shadow: 0 0 30px rgba(42, 203, 210, 0.12);
   }
 
   .section-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #2a2a2a, transparent);
+    background: linear-gradient(90deg, transparent, #1e2e2f, transparent);
   }
 }
 
@@ -101,12 +97,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2a2a2a;
+  background: #1e2e2f;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF6B35;
+  background: #2acbd2;
 }
 
 /* WhatsApp floating button */
@@ -148,21 +144,3 @@
   opacity: 1;
   transform: translateY(0);
 }
-
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.reveal-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
-.stagger-6 { transition-delay: 0.6s; }

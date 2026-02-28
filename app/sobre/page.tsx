@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Sobre Nós — 30 Anos de Know-How em Bastidores Industriais",
   description:
-    "Conheça a Steel Unik — fundada por Rui Azevedo Silva, com 30+ anos de experiência em bastidores e jigs para linhas de pintura industrial. Maia, Porto.",
+    "Conheça a Steel Unik — fundada por Rui Azevedo Silva, com 30+ anos de experiência em bastidores para linhas de pintura industrial. Maia, Porto.",
 };
 
 const values = [
@@ -39,7 +39,7 @@ const team = [
   {
     name: "Rui Azevedo Silva",
     role: "Fundador & Diretor Técnico",
-    bio: "Com mais de 30 anos de experiência em bastidores e jigs industriais, Rui Azevedo Silva fundou a Steel Unik com um objetivo claro: resolver um problema que a indústria automóvel enfrentava todos os dias.",
+    bio: "Com mais de 30 anos de experiência em bastidores industriais, Rui Azevedo Silva fundou a Steel Unik com um objetivo claro: resolver um problema que a indústria automóvel enfrentava todos os dias.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function SobrePage() {
           >
             30 ANOS A CONSTRUIR
             <br />
-            <span className="text-steel-orange">BASTIDORES QUE SUSTENTAM</span>
+            <span className="text-steel-accent">BASTIDORES QUE SUSTENTAM</span>
             <br />
             AS MAIORES LINHAS DE PINTURA
             <br />
@@ -91,7 +91,7 @@ export default function SobrePage() {
               >
                 DE EMPRESA UNIPESSOAL
                 <br />
-                <span className="text-steel-orange">À REFERÊNCIA DO SETOR</span>
+                <span className="text-steel-accent">À REFERÊNCIA DO SETOR</span>
               </h2>
               <div className="flex flex-col gap-6 text-steel-muted text-base leading-relaxed">
                 <p>
@@ -122,7 +122,7 @@ export default function SobrePage() {
             {/* Timeline visual */}
             <div className="card-dark p-8">
               <h3
-                className="text-steel-orange font-bold text-xl mb-8 uppercase tracking-wider"
+                className="text-steel-accent font-bold text-xl mb-8 uppercase tracking-wider"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 Linha do Tempo
@@ -138,12 +138,12 @@ export default function SobrePage() {
                   { year: "2024", event: "30 anos. +50 clientes. +10.000 bastidores produzidos." },
                 ].map((item) => (
                   <div key={item.year} className="flex gap-8 pb-8 relative">
-                    <div className="w-10 h-10 rounded-full bg-steel-orange flex items-center justify-center flex-shrink-0 relative z-10 text-white font-bold text-xs">
+                    <div className="w-10 h-10 rounded-full bg-steel-accent flex items-center justify-center flex-shrink-0 relative z-10 text-white font-bold text-xs">
                       <div className="w-3 h-3 rounded-full bg-white" />
                     </div>
                     <div className="pt-1">
                       <div
-                        className="text-steel-orange font-black text-2xl leading-none"
+                        className="text-steel-accent font-black text-2xl leading-none"
                         style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                       >
                         {item.year}
@@ -170,14 +170,14 @@ export default function SobrePage() {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               O QUE NOS{" "}
-              <span className="text-steel-orange">DEFINE</span>
+              <span className="text-steel-accent">DEFINE</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
-              <div key={value.title} className="card-dark p-6 hover:border-steel-orange/40 transition-all duration-300">
-                <div className="w-12 h-12 rounded-sm bg-steel-orange/10 border border-steel-orange/20 flex items-center justify-center mb-4">
-                  <value.icon size={20} className="text-steel-orange" />
+              <div key={value.title} className="card-dark p-6 hover:border-steel-accent/40 transition-all duration-300">
+                <div className="w-12 h-12 rounded-sm bg-steel-accent/10 border border-steel-accent/20 flex items-center justify-center mb-4">
+                  <value.icon size={20} className="text-steel-accent" />
                 </div>
                 <h3
                   className="text-white font-bold text-lg mb-3"
@@ -204,7 +204,7 @@ export default function SobrePage() {
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
             >
               PESSOAS REAIS,{" "}
-              <span className="text-steel-orange">RESULTADOS REAIS</span>
+              <span className="text-steel-accent">RESULTADOS REAIS</span>
             </h2>
             <p className="text-steel-muted text-base leading-relaxed">
               6 operadores de produção + 2 administrativos. Uma equipa pequena,
@@ -214,8 +214,8 @@ export default function SobrePage() {
 
           {/* Team placeholder */}
           <div className="card-dark p-12 text-center max-w-xl mx-auto">
-            <div className="w-24 h-24 rounded-full bg-steel-orange/20 border-2 border-steel-orange/40 mx-auto mb-6 flex items-center justify-center">
-              <Users size={36} className="text-steel-orange" />
+            <div className="w-24 h-24 rounded-full bg-steel-accent/20 border-2 border-steel-accent/40 mx-auto mb-6 flex items-center justify-center">
+              <Users size={36} className="text-steel-accent" />
             </div>
             <h3
               className="text-white font-black text-2xl mb-1"
@@ -223,7 +223,7 @@ export default function SobrePage() {
             >
               {team[0].name}
             </h3>
-            <p className="text-steel-orange text-sm font-semibold uppercase tracking-wider mb-4">
+            <p className="text-steel-accent text-sm font-semibold uppercase tracking-wider mb-4">
               {team[0].role}
             </p>
             <p className="text-steel-muted text-sm leading-relaxed">
@@ -245,13 +245,13 @@ export default function SobrePage() {
               >
                 MAIA — PORTO
                 <br />
-                <span className="text-steel-orange">NO CORAÇÃO INDUSTRIAL</span>
+                <span className="text-steel-accent">NO CORAÇÃO INDUSTRIAL</span>
                 <br />
                 DE PORTUGAL
               </h2>
               <div className="flex flex-col gap-3 text-steel-muted">
                 <p className="flex items-start gap-2">
-                  <MapPin size={16} className="text-steel-orange mt-0.5 flex-shrink-0" />
+                  <MapPin size={16} className="text-steel-accent mt-0.5 flex-shrink-0" />
                   Rua António da Silva Torres 100, 4475-455 Nogueira, Maia
                 </p>
                 <p className="text-sm leading-relaxed">
@@ -267,7 +267,7 @@ export default function SobrePage() {
             {/* Map placeholder */}
             <div className="aspect-video bg-steel-gray border border-steel-border rounded-sm flex items-center justify-center">
               <div className="text-center">
-                <MapPin size={48} className="text-steel-orange mx-auto mb-3" />
+                <MapPin size={48} className="text-steel-accent mx-auto mb-3" />
                 <p className="text-steel-muted text-sm">
                   Rua António da Silva Torres 100
                 </p>
@@ -276,7 +276,7 @@ export default function SobrePage() {
                   href="https://maps.google.com/?q=Rua+António+da+Silva+Torres+100+Maia"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-steel-orange text-sm mt-2 inline-block hover:underline"
+                  className="text-steel-accent text-sm mt-2 inline-block hover:underline"
                 >
                   Abrir no Google Maps →
                 </a>

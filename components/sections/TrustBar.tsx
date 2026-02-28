@@ -5,7 +5,6 @@ export default function TrustBar() {
     "Prettl",
     "Preh Portugal",
     "SMP",
-    "Novacoating",
     "Fesht Componentes",
     "Doureca",
     "Aludec España",
@@ -19,19 +18,15 @@ export default function TrustBar() {
         </p>
       </div>
 
-      {/* Scrolling logos — animation via Tailwind keyframes in globals.css */}
       <div className="relative flex overflow-hidden">
         <div
           className="flex gap-16 whitespace-nowrap"
           style={{ animation: "trustbar-scroll 30s linear infinite" }}
         >
           {[...clients, ...clients].map((client, i) => (
-            <div
-              key={`${client}-${i}`}
-              className="flex items-center gap-16 flex-shrink-0"
-            >
+            <div key={`${client}-${i}`} className="flex items-center gap-16 flex-shrink-0">
               <div className="flex items-center gap-3">
-                <div className="w-2 h-2 rounded-full bg-steel-orange flex-shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-steel-accent flex-shrink-0" />
                 <span
                   className="text-steel-metal font-semibold uppercase tracking-wider text-sm whitespace-nowrap"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}

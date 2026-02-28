@@ -16,14 +16,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "Jig de suspensão para peças de grande dimensão",
+    title: "Bastidor de suspensão para peças de grande dimensão",
     subtitle: "Linha de pintura líquida — Setor Automóvel",
     category: "Automóvel",
     tags: ["Alumínio", "50 un.", "Protótipo+Série"],
   },
   {
     id: 3,
-    title: "Rack de cromagem para componentes interiores",
+    title: "Bastidor de cromagem para componentes interiores",
     subtitle: "Cliente de referência — Setor Automóvel Tier 1",
     category: "Cromagem",
     tags: ["Inox", "500 un.", "Série"],
@@ -37,41 +37,36 @@ const projects = [
   },
   {
     id: 5,
-    title: "Jig de pintura para para-choques",
+    title: "Bastidor de pintura para para-choques",
     subtitle: "Linha de pintura automóvel — Rotação de 1.000 un.",
     category: "Automóvel",
     tags: ["Aço", "1.000 un.", "Grande série"],
   },
   {
     id: 6,
-    title: "Suporte multipeça para cataforese",
+    title: "Bastidor multipeça para cataforese",
     subtitle: "Capacidade 12 peças/ciclo — Cliente Tier 1",
     category: "Automóvel",
     tags: ["Aço galv.", "300 un.", "Série"],
   },
 ];
 
-// SVG placeholder for portfolio items
 function ProjectPlaceholder({ id }: { id: number }) {
-  const colors = ["#FF6B35", "#8a9aaa", "#2a4a6a", "#FF6B35", "#8a9aaa", "#2a4a6a"];
-  const color = colors[id % colors.length];
-
   return (
     <div className="w-full h-full flex items-center justify-center bg-steel-gray">
       <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        {/* Abstract jig representation */}
-        <rect x="10" y="15" width="4" height="50" fill={color} rx="1" opacity="0.8"/>
-        <rect x="66" y="15" width="4" height="50" fill={color} rx="1" opacity="0.8"/>
-        <rect x="10" y="15" width="60" height="3" fill={color} rx="1"/>
-        <rect x="10" y="62" width="60" height="3" fill={color} rx="1"/>
-        <rect x="14" y="30" width="52" height="2" fill={color} rx="1" opacity="0.5"/>
-        <rect x="14" y="42" width="52" height="2" fill={color} rx="1" opacity="0.5"/>
-        <circle cx="25" cy="23" r="3" stroke={color} strokeWidth="1.5" fill="none"/>
-        <circle cx="40" cy="23" r="3" stroke={color} strokeWidth="1.5" fill="none"/>
-        <circle cx="55" cy="23" r="3" stroke={color} strokeWidth="1.5" fill="none"/>
-        <line x1="25" y1="20" x2="25" y2="15" stroke={color} strokeWidth="1.5"/>
-        <line x1="40" y1="20" x2="40" y2="15" stroke={color} strokeWidth="1.5"/>
-        <line x1="55" y1="20" x2="55" y2="15" stroke={color} strokeWidth="1.5"/>
+        <rect x="10" y="15" width="4" height="50" fill="#2acbd2" rx="1" opacity="0.8"/>
+        <rect x="66" y="15" width="4" height="50" fill="#2acbd2" rx="1" opacity="0.8"/>
+        <rect x="10" y="15" width="60" height="3" fill="#2acbd2" rx="1"/>
+        <rect x="10" y="62" width="60" height="3" fill="#2acbd2" rx="1"/>
+        <rect x="14" y="30" width="52" height="2" fill="#2acbd2" rx="1" opacity="0.5"/>
+        <rect x="14" y="42" width="52" height="2" fill="#2acbd2" rx="1" opacity="0.5"/>
+        <circle cx="25" cy="23" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
+        <circle cx="40" cy="23" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
+        <circle cx="55" cy="23" r="3" stroke="#2acbd2" strokeWidth="1.5" fill="none"/>
+        <line x1="25" y1="20" x2="25" y2="15" stroke="#2acbd2" strokeWidth="1.5"/>
+        <line x1="40" y1="20" x2="40" y2="15" stroke="#2acbd2" strokeWidth="1.5"/>
+        <line x1="55" y1="20" x2="55" y2="15" stroke="#2acbd2" strokeWidth="1.5"/>
       </svg>
     </div>
   );
@@ -98,7 +93,7 @@ export default function Portfolio() {
             >
               TRABALHOS
               <br />
-              <span className="text-steel-orange">REALIZADOS</span>
+              <span className="text-steel-accent">REALIZADOS</span>
             </h2>
           </div>
           <p className="text-steel-muted text-sm max-w-xs">
@@ -107,7 +102,7 @@ export default function Portfolio() {
           </p>
         </div>
 
-        {/* Filters */}
+        {/* Filtros */}
         <div className="flex flex-wrap gap-2 mb-10">
           {filters.map((filter) => (
             <button
@@ -115,8 +110,8 @@ export default function Portfolio() {
               onClick={() => setActiveFilter(filter)}
               className={`px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-sm border transition-all duration-200 ${
                 activeFilter === filter
-                  ? "bg-steel-orange border-steel-orange text-white"
-                  : "border-steel-border text-steel-muted hover:border-steel-orange/50 hover:text-white"
+                  ? "bg-steel-accent border-steel-accent text-steel-dark"
+                  : "border-steel-border text-steel-muted hover:border-steel-accent/50 hover:text-white"
               }`}
             >
               {filter}
@@ -124,28 +119,24 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* Grid */}
+        {/* Grelha */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {filtered.map((project) => (
             <div
               key={project.id}
-              className="group card-dark overflow-hidden hover:border-steel-orange/40 transition-all duration-300"
+              className="group card-dark overflow-hidden hover:border-steel-accent/40 transition-all duration-300"
             >
-              {/* Image area */}
               <div className="aspect-[4/3] overflow-hidden relative">
                 <ProjectPlaceholder id={project.id} />
-                <div className="absolute inset-0 bg-gradient-to-t from-steel-card via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="absolute top-3 right-3">
-                  <span className="bg-steel-darker/80 text-steel-orange text-xs px-2 py-1 rounded-sm border border-steel-orange/30 font-semibold uppercase tracking-wider">
+                  <span className="bg-steel-darker/80 text-steel-accent text-xs px-2 py-1 rounded-sm border border-steel-accent/30 font-semibold uppercase tracking-wider">
                     {project.category}
                   </span>
                 </div>
               </div>
-
-              {/* Content */}
               <div className="p-5">
                 <h3
-                  className="text-white font-bold text-lg mb-1 leading-tight group-hover:text-steel-orange transition-colors"
+                  className="text-white font-bold text-lg mb-1 leading-tight group-hover:text-steel-accent transition-colors"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                 >
                   {project.title}
@@ -153,10 +144,7 @@ export default function Portfolio() {
                 <p className="text-steel-muted text-xs mb-4">{project.subtitle}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="bg-steel-gray text-steel-metal text-xs px-2 py-1 rounded-sm"
-                    >
+                    <span key={tag} className="bg-steel-gray text-steel-metal text-xs px-2 py-1 rounded-sm">
                       {tag}
                     </span>
                   ))}
@@ -166,7 +154,6 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-12">
           <Link href="/portfolio" className="btn-secondary">
             Ver Portfólio Completo

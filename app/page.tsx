@@ -10,9 +10,9 @@ import Sectors from "@/components/sections/Sectors";
 import ContactCTA from "@/components/sections/ContactCTA";
 
 export const metadata: Metadata = {
-  title: "Steel Unik — Bastidores e Jigs para Linhas de Pintura Industrial",
+  title: "Steel Unik — Bastidores para Linhas de Pintura Industrial",
   description:
-    "30 anos a fabricar bastidores e jigs para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Fornecedor Tier 1 em Portugal e Espanha.",
+    "30 anos a fabricar bastidores para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Fornecedor Tier 1 em Portugal e Espanha.",
 };
 
 export default function Home() {

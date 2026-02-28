@@ -8,7 +8,7 @@ const steps = [
     number: "01",
     title: "Receção da Especificação",
     description:
-      "Enviamos-nos a peça física, ficheiro CAD (DXF, STEP, STP), foto ou simples descrição. Analisamos e contactamos em menos de 24 horas.",
+      "Envie-nos a peça física, o ficheiro CAD (DXF, STEP, STP), uma foto ou uma descrição. Analisamos e respondemos em menos de 24 horas.",
     detail: "CAD / Foto / Peça física",
   },
   {
@@ -16,7 +16,7 @@ const steps = [
     number: "02",
     title: "Desenvolvimento do Protótipo",
     description:
-      "Os nossos técnicos desenvolvem o bastidor em SolidWorks 3D. Recebe o protótipo digital para validação antes de qualquer produção física.",
+      "Os nossos técnicos desenvolvem o bastidor em SolidWorks 3D. O cliente recebe o modelo digital para validação antes de qualquer produção física.",
     detail: "SolidWorks 3D + CAD 2D",
   },
   {
@@ -24,7 +24,7 @@ const steps = [
     number: "03",
     title: "Validação com o Cliente",
     description:
-      "Produzimos o protótipo físico. O cliente valida in-loco ou recebe para teste na linha de produção. Zero surpresas em série.",
+      "Produzimos o protótipo físico. O cliente valida in loco ou recebe-o para teste na linha de produção. Zero surpresas em série.",
     detail: "Protótipo físico incluído",
   },
   {
@@ -50,7 +50,7 @@ export default function Process() {
           >
             DO PROJETO À
             <br />
-            <span className="text-steel-orange">PRODUÇÃO EM 4 PASSOS</span>
+            <span className="text-steel-accent">PRODUÇÃO EM 4 PASSOS</span>
           </h2>
           <p className="text-steel-muted text-base leading-relaxed">
             Um processo testado e validado ao longo de 30 anos, concebido para
@@ -58,34 +58,30 @@ export default function Process() {
           </p>
         </div>
 
-        {/* Steps */}
+        {/* Passos */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 relative">
-          {/* Connecting line (desktop) */}
-          <div className="hidden lg:block absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-steel-orange/30 to-transparent" />
+          <div className="hidden lg:block absolute top-16 left-0 right-0 h-px bg-gradient-to-r from-transparent via-steel-accent/30 to-transparent" />
 
           {steps.map((step, index) => (
             <div key={step.number} className="relative p-8 group">
-              {/* Step number */}
               <div className="relative mb-8">
-                <div className="w-12 h-12 rounded-full bg-steel-orange flex items-center justify-center relative z-10">
-                  <step.icon size={20} className="text-white" />
+                <div className="w-12 h-12 rounded-full bg-steel-accent flex items-center justify-center relative z-10">
+                  <step.icon size={20} className="text-steel-dark" />
                 </div>
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-6 left-12 w-full h-px bg-steel-border" />
                 )}
               </div>
 
-              {/* Number */}
               <span
-                className="font-heading font-black text-6xl text-steel-border group-hover:text-steel-orange/20 transition-colors block mb-4 -mt-4"
+                className="font-heading font-black text-6xl text-steel-border group-hover:text-steel-accent/20 transition-colors block mb-4 -mt-4"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 {step.number}
               </span>
 
-              {/* Content */}
               <h3
-                className="text-white font-bold text-xl mb-3 leading-tight group-hover:text-steel-orange transition-colors"
+                className="text-white font-bold text-xl mb-3 leading-tight group-hover:text-steel-accent transition-colors"
                 style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
               >
                 {step.title}
@@ -93,17 +89,14 @@ export default function Process() {
               <p className="text-steel-muted text-sm leading-relaxed mb-4">
                 {step.description}
               </p>
-              <div className="inline-flex items-center gap-2 bg-steel-orange/10 px-3 py-1 rounded-sm">
-                <div className="w-1.5 h-1.5 rounded-full bg-steel-orange" />
-                <span className="text-steel-orange text-xs font-semibold">
-                  {step.detail}
-                </span>
+              <div className="inline-flex items-center gap-2 bg-steel-accent/10 px-3 py-1 rounded-sm">
+                <div className="w-1.5 h-1.5 rounded-full bg-steel-accent" />
+                <span className="text-steel-accent text-xs font-semibold">{step.detail}</span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <p className="text-steel-muted text-sm mb-4">
             Sem custos de maquetagem. Sem surpresas. Sem paragens de linha.

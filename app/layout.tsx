@@ -6,11 +6,11 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata: Metadata = {
   title: {
-    default: "Steel Unik — Bastidores e Jigs para Linhas de Pintura Industrial",
+    default: "Steel Unik — Bastidores para Linhas de Pintura Industrial",
     template: "%s | Steel Unik",
   },
   description:
-    "Steel Unik — 30 anos a fabricar bastidores e jigs para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Fornecedor Tier 1 em Portugal e Espanha.",
+    "Steel Unik — 30 anos a fabricar bastidores para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Fornecedor Tier 1 em Portugal e Espanha.",
   keywords: [
     "bastidores pintura industrial",
     "jigs pintura automóvel Portugal",
@@ -28,15 +28,15 @@ export const metadata: Metadata = {
     locale: "pt_PT",
     url: "https://www.steelunik.com",
     siteName: "Steel Unik",
-    title: "Steel Unik — Bastidores e Jigs para Linhas de Pintura Industrial",
+    title: "Steel Unik — Bastidores para Linhas de Pintura Industrial",
     description:
-      "30 anos a fabricar bastidores e jigs para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Tier 1.",
+      "30 anos a fabricar bastidores para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Tier 1.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Steel Unik — Bastidores e Jigs para Linhas de Pintura Industrial",
+    title: "Steel Unik — Bastidores para Linhas de Pintura Industrial",
     description:
-      "30 anos a fabricar bastidores e jigs para linhas de pintura industrial.",
+      "30 anos a fabricar bastidores para linhas de pintura industrial.",
   },
   robots: {
     index: true,
