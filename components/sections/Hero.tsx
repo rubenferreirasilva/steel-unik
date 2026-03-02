@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function Hero() {
@@ -96,39 +95,37 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Direita — Foto real da fábrica */}
+          {/* Direita — Logo */}
           <div className="relative hidden lg:flex items-center justify-center">
-            <div className="relative w-full max-w-lg">
-              {/* Foto principal */}
-              <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-steel-border shadow-deep">
-                <Image
-                  src="/images/hero/hero-fabrica.jpg"
-                  alt="Interior da fábrica SteelUnik — linha de produção de bastidores industriais"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-                {/* Overlay suave no fundo */}
-                <div className="absolute inset-0 bg-gradient-to-t from-steel-darker/60 via-transparent to-transparent" />
+            <div className="relative flex flex-col items-center justify-center gap-6">
+              {/* Linha decorativa topo */}
+              <div className="w-px h-16 bg-gradient-to-b from-transparent to-steel-accent" />
+
+              {/* Logo */}
+              <div className="text-center">
+                <div
+                  className="font-black text-white uppercase leading-none"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(4rem, 7vw, 7rem)" }}
+                >
+                  STEEL<span className="text-steel-accent">UNIK</span>
+                </div>
+                <div className="text-steel-metal text-sm uppercase tracking-[0.4em] mt-3">
+                  Bastidores Industriais
+                </div>
               </div>
 
-              {/* Badges flutuantes */}
-              <div className="absolute -top-4 -right-4 bg-steel-accent text-white px-4 py-2 rounded-sm text-xs font-black uppercase tracking-wider shadow-accent">
-                30+ Anos
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-steel-card border border-steel-border px-4 py-3 rounded-sm text-xs shadow-card">
-                <span className="text-steel-accent font-bold">Tier 1</span>
-                <span className="text-steel-muted ml-1">Automóvel</span>
-              </div>
+              {/* Linha decorativa fundo */}
+              <div className="w-px h-16 bg-gradient-to-b from-steel-accent to-transparent" />
 
-              {/* Miniatura secundária */}
-              <div className="absolute -right-8 top-1/3 w-32 aspect-square rounded-sm overflow-hidden border-2 border-steel-accent/40 shadow-accent">
-                <Image
-                  src="/images/hero/hero-bastidores-01.jpg"
-                  alt="Bastidor industrial SteelUnik"
-                  fill
-                  className="object-cover"
-                />
+              {/* Badges */}
+              <div className="flex gap-4 mt-2">
+                <div className="bg-steel-accent/10 border border-steel-accent/30 px-4 py-2 rounded-sm text-xs text-steel-accent font-bold uppercase tracking-wider">
+                  Desde 1994
+                </div>
+                <div className="bg-steel-card border border-steel-border px-4 py-2 rounded-sm text-xs uppercase tracking-wider">
+                  <span className="text-steel-accent font-bold">Tier 1</span>
+                  <span className="text-steel-muted ml-1">Automóvel</span>
+                </div>
               </div>
             </div>
           </div>
