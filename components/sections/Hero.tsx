@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 export default function Hero() {
@@ -95,54 +96,39 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Direita — Visual */}
+          {/* Direita — Foto real da fábrica */}
           <div className="relative hidden lg:flex items-center justify-center">
-            <div className="relative w-full aspect-square max-w-lg">
-              {/* Anéis rotativos */}
-              <div className="absolute inset-0 rounded-full border border-steel-border opacity-30 animate-[spin_30s_linear_infinite]" />
-              <div className="absolute inset-8 rounded-full border border-steel-accent/20 animate-[spin_20s_linear_infinite_reverse]" />
-
-              {/* Centro */}
-              <div className="absolute inset-12 bg-steel-gray border border-steel-border rounded-sm flex items-center justify-center overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-10"
-                  style={{
-                    backgroundImage: `linear-gradient(rgba(26,111,232,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(26,111,232,0.3) 1px, transparent 1px)`,
-                    backgroundSize: "20px 20px",
-                  }}
+            <div className="relative w-full max-w-lg">
+              {/* Foto principal */}
+              <div className="relative aspect-[4/5] rounded-sm overflow-hidden border border-steel-border shadow-deep">
+                <Image
+                  src="/images/hero/hero-fabrica.jpg"
+                  alt="Interior da fábrica SteelUnik — linha de produção de bastidores industriais"
+                  fill
+                  className="object-cover"
+                  priority
                 />
-                <div className="relative z-10 flex flex-col items-center gap-4">
-                  <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
-                    <rect x="10" y="20" width="8" height="80" fill="#1A6FE8" rx="1" />
-                    <rect x="102" y="20" width="8" height="80" fill="#1A6FE8" rx="1" />
-                    <rect x="10" y="20" width="100" height="6" fill="#1A6FE8" rx="1" />
-                    <rect x="10" y="94" width="100" height="6" fill="#1A6FE8" rx="1" />
-                    <rect x="18" y="44" width="84" height="4" fill="#8a9aaa" rx="1" opacity="0.8" />
-                    <rect x="18" y="60" width="84" height="4" fill="#8a9aaa" rx="1" opacity="0.8" />
-                    <rect x="18" y="76" width="84" height="4" fill="#8a9aaa" rx="1" opacity="0.8" />
-                    <circle cx="35" cy="38" r="4" stroke="#1A6FE8" strokeWidth="2" fill="none" />
-                    <circle cx="60" cy="38" r="4" stroke="#1A6FE8" strokeWidth="2" fill="none" />
-                    <circle cx="85" cy="38" r="4" stroke="#1A6FE8" strokeWidth="2" fill="none" />
-                    <line x1="35" y1="34" x2="35" y2="26" stroke="#1A6FE8" strokeWidth="2" />
-                    <line x1="60" y1="34" x2="60" y2="26" stroke="#1A6FE8" strokeWidth="2" />
-                    <line x1="85" y1="34" x2="85" y2="26" stroke="#1A6FE8" strokeWidth="2" />
-                  </svg>
-                  <div className="text-center">
-                    <p className="text-steel-accent font-semibold text-sm uppercase tracking-wider">
-                      Bastidores Industriais
-                    </p>
-                    <p className="text-steel-muted text-xs">Precisão garantida</p>
-                  </div>
-                </div>
+                {/* Overlay suave no fundo */}
+                <div className="absolute inset-0 bg-gradient-to-t from-steel-darker/60 via-transparent to-transparent" />
               </div>
 
               {/* Badges flutuantes */}
-              <div className="absolute -top-4 -right-4 bg-steel-accent text-steel-dark px-3 py-2 rounded-sm text-xs font-black uppercase tracking-wider">
+              <div className="absolute -top-4 -right-4 bg-steel-accent text-white px-4 py-2 rounded-sm text-xs font-black uppercase tracking-wider shadow-accent">
                 30+ Anos
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-steel-card border border-steel-border px-3 py-2 rounded-sm text-xs">
+              <div className="absolute -bottom-4 -left-4 bg-steel-card border border-steel-border px-4 py-3 rounded-sm text-xs shadow-card">
                 <span className="text-steel-accent font-bold">Tier 1</span>
                 <span className="text-steel-muted ml-1">Automóvel</span>
+              </div>
+
+              {/* Miniatura secundária */}
+              <div className="absolute -right-8 top-1/3 w-32 aspect-square rounded-sm overflow-hidden border-2 border-steel-accent/40 shadow-accent">
+                <Image
+                  src="/images/hero/hero-bastidores-01.jpg"
+                  alt="Bastidor industrial SteelUnik"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

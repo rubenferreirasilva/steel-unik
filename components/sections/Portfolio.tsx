@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const filters = ["Todos", "Automóvel", "Powder Coating", "Cromagem", "Anodização"];
@@ -13,6 +14,7 @@ const projects = [
     subtitle: "Série de 200 unidades — Cliente Tier 1 Automóvel",
     category: "Powder Coating",
     tags: ["Aço carbono", "200 un.", "Série"],
+    image: "/images/portfolio/bastidor-01.jpg",
   },
   {
     id: 2,
@@ -20,6 +22,7 @@ const projects = [
     subtitle: "Linha de pintura líquida — Setor Automóvel",
     category: "Automóvel",
     tags: ["Alumínio", "50 un.", "Protótipo+Série"],
+    image: "/images/portfolio/bastidor-02.jpg",
   },
   {
     id: 3,
@@ -27,6 +30,7 @@ const projects = [
     subtitle: "Cliente de referência — Setor Automóvel Tier 1",
     category: "Cromagem",
     tags: ["Inox", "500 un.", "Série"],
+    image: "/images/portfolio/bastidor-03.jpg",
   },
   {
     id: 4,
@@ -34,6 +38,7 @@ const projects = [
     subtitle: "Setor de caixilharia — Produção contínua",
     category: "Anodização",
     tags: ["Titânio/Al", "100 un.", "Modular"],
+    image: "/images/portfolio/bastidor-04.jpg",
   },
   {
     id: 5,
@@ -41,6 +46,7 @@ const projects = [
     subtitle: "Linha de pintura automóvel — Rotação de 1.000 un.",
     category: "Automóvel",
     tags: ["Aço", "1.000 un.", "Grande série"],
+    image: "/images/portfolio/bastidor-05.jpg",
   },
   {
     id: 6,
@@ -48,29 +54,10 @@ const projects = [
     subtitle: "Capacidade 12 peças/ciclo — Cliente Tier 1",
     category: "Automóvel",
     tags: ["Aço galv.", "300 un.", "Série"],
+    image: "/images/portfolio/bastidor-06.jpg",
   },
 ];
 
-function ProjectPlaceholder({ id }: { id: number }) {
-  return (
-    <div className="w-full h-full flex items-center justify-center bg-steel-gray">
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-        <rect x="10" y="15" width="4" height="50" fill="#1A6FE8" rx="1" opacity="0.8"/>
-        <rect x="66" y="15" width="4" height="50" fill="#1A6FE8" rx="1" opacity="0.8"/>
-        <rect x="10" y="15" width="60" height="3" fill="#1A6FE8" rx="1"/>
-        <rect x="10" y="62" width="60" height="3" fill="#1A6FE8" rx="1"/>
-        <rect x="14" y="30" width="52" height="2" fill="#1A6FE8" rx="1" opacity="0.5"/>
-        <rect x="14" y="42" width="52" height="2" fill="#1A6FE8" rx="1" opacity="0.5"/>
-        <circle cx="25" cy="23" r="3" stroke="#1A6FE8" strokeWidth="1.5" fill="none"/>
-        <circle cx="40" cy="23" r="3" stroke="#1A6FE8" strokeWidth="1.5" fill="none"/>
-        <circle cx="55" cy="23" r="3" stroke="#1A6FE8" strokeWidth="1.5" fill="none"/>
-        <line x1="25" y1="20" x2="25" y2="15" stroke="#1A6FE8" strokeWidth="1.5"/>
-        <line x1="40" y1="20" x2="40" y2="15" stroke="#1A6FE8" strokeWidth="1.5"/>
-        <line x1="55" y1="20" x2="55" y2="15" stroke="#1A6FE8" strokeWidth="1.5"/>
-      </svg>
-    </div>
-  );
-}
 
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("Todos");
@@ -127,7 +114,13 @@ export default function Portfolio() {
               className="group card-dark overflow-hidden hover:border-steel-accent/40 transition-all duration-300"
             >
               <div className="aspect-[4/3] overflow-hidden relative">
-                <ProjectPlaceholder id={project.id} />
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-steel-darker/40 to-transparent" />
                 <div className="absolute top-3 right-3">
                   <span className="bg-steel-darker/80 text-steel-accent text-xs px-2 py-1 rounded-sm border border-steel-accent/30 font-semibold uppercase tracking-wider">
                     {project.category}

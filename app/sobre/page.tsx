@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MapPin, Users, Award, Target } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Sobre Nós — 30 Anos de Know-How em Bastidores Industriais",
@@ -51,7 +52,7 @@ export default function SobrePage() {
         <div
           className="absolute inset-0 opacity-5"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,107,53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(26,111,232,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(26,111,232,0.3) 1px, transparent 1px)`,
             backgroundSize: "60px 60px",
           }}
         />
@@ -212,23 +213,32 @@ export default function SobrePage() {
             </p>
           </div>
 
-          {/* Team placeholder */}
-          <div className="card-dark p-12 text-center max-w-xl mx-auto">
-            <div className="w-24 h-24 rounded-full bg-steel-accent/20 border-2 border-steel-accent/40 mx-auto mb-6 flex items-center justify-center">
-              <Users size={36} className="text-steel-accent" />
+          {/* Team card com foto real */}
+          <div className="card-dark max-w-2xl mx-auto overflow-hidden">
+            <div className="grid sm:grid-cols-2">
+              <div className="relative aspect-square sm:aspect-auto min-h-64">
+                <Image
+                  src="/images/sobre-equipa.jpg"
+                  alt="Rui Azevedo Silva — Fundador da SteelUnik"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-8 flex flex-col justify-center">
+                <h3
+                  className="text-white font-black text-2xl mb-1"
+                  style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                >
+                  {team[0].name}
+                </h3>
+                <p className="text-steel-accent text-sm font-semibold uppercase tracking-wider mb-4">
+                  {team[0].role}
+                </p>
+                <p className="text-steel-muted text-sm leading-relaxed">
+                  {team[0].bio}
+                </p>
+              </div>
             </div>
-            <h3
-              className="text-white font-black text-2xl mb-1"
-              style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-            >
-              {team[0].name}
-            </h3>
-            <p className="text-steel-accent text-sm font-semibold uppercase tracking-wider mb-4">
-              {team[0].role}
-            </p>
-            <p className="text-steel-muted text-sm leading-relaxed">
-              {team[0].bio}
-            </p>
           </div>
         </div>
       </section>
