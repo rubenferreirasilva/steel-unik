@@ -51,7 +51,7 @@ export default function ContactoPage() {
         <div
           className="absolute inset-0 opacity-5"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,107,53,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,0.3) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(26,111,232,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(26,111,232,0.3) 1px, transparent 1px)`,
             backgroundSize: "60px 60px",
           }}
         />
@@ -115,20 +115,28 @@ export default function ContactoPage() {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div className="card-dark aspect-video flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <MapPin size={40} className="text-steel-accent mx-auto mb-3" />
-                  <p className="text-white font-semibold mb-1">Steel Unik</p>
-                  <p className="text-steel-muted text-sm">
-                    Rua António da Silva Torres 100
-                  </p>
-                  <p className="text-steel-muted text-sm mb-3">4475-455 Nogueira, Maia</p>
+              {/* Google Maps embed */}
+              <div className="card-dark overflow-hidden mb-6">
+                <iframe
+                  src="https://www.google.com/maps?q=Rua+António+da+Silva+Torres+100,+4475-455+Nogueira,+Maia&output=embed"
+                  width="100%"
+                  height="300"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Localização Steel Unik — Maia"
+                />
+                <div className="px-4 py-3 flex items-center justify-between border-t border-steel-border">
+                  <div className="flex items-center gap-2 text-steel-muted text-xs">
+                    <MapPin size={13} className="text-steel-accent" />
+                    Rua António da Silva Torres 100, Maia
+                  </div>
                   <a
-                    href="https://maps.google.com/?q=Rua+António+da+Silva+Torres+100+Maia"
+                    href="https://maps.google.com/?q=Rua+António+da+Silva+Torres+100,+4475-455+Nogueira,+Maia"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-steel-accent text-sm hover:underline"
+                    className="text-steel-accent text-xs font-semibold hover:underline"
                   >
                     Abrir no Google Maps →
                   </a>
