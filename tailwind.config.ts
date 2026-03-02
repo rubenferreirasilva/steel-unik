@@ -14,10 +14,10 @@ const config: Config = {
         "su-dark":    "#141418",
         "su-surface": "#1C1C22",
         "su-border":  "#2A2A35",
-        /* Acento laranja industrial */
-        "su-accent":       "#E8510A",
-        "su-accent-hover": "#FF6B2B",
-        "su-accent-muted": "#8C3005",
+        /* Acento azul industrial */
+        "su-accent":       "#1A6FE8",
+        "su-accent-hover": "#4D8EFF",
+        "su-accent-muted": "#0A3A80",
         /* Texto / metal */
         "su-100": "#E8EEF2",
         "su-200": "#C8D4DC",
@@ -31,9 +31,9 @@ const config: Config = {
         "steel-card":    "#1C1C22",
         "steel-border":  "#2A2A35",
         "steel-muted":   "#8892A0",
-        "steel-accent":  "#E8510A",
-        "steel-accent-dark":  "#8C3005",
-        "steel-accent-light": "#FF6B2B",
+        "steel-accent":  "#1A6FE8",
+        "steel-accent-dark":  "#0A3A80",
+        "steel-accent-light": "#4D8EFF",
         "steel-metal":   "#A8B4C0",
         "steel-light":   "#E8EEF2",
       },
@@ -46,12 +46,12 @@ const config: Config = {
         hero: "clamp(3rem, 8vw, 6rem)",
       },
       backgroundImage: {
-        "gradient-accent": "linear-gradient(135deg, #E8510A 0%, #FF6B2B 100%)",
+        "gradient-accent": "linear-gradient(135deg, #1A6FE8 0%, #4D8EFF 100%)",
         "gradient-hero":   "linear-gradient(135deg, #0D0D0F 0%, #1a1a24 50%, #0D0D0F 100%)",
         "gradient-metal":  "linear-gradient(180deg, #2A2A35 0%, #1C1C22 100%)",
       },
       boxShadow: {
-        accent: "0 4px 32px rgba(232, 81, 10, 0.25)",
+        accent: "0 4px 32px rgba(26, 111, 232, 0.25)",
         card:   "0 4px 24px rgba(0, 0, 0, 0.4)",
         deep:   "0 20px 60px rgba(0, 0, 0, 0.6)",
       },
