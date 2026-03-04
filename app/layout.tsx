@@ -26,11 +26,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_PT",
-    url: "https://www.steelunik.com",
+    url: "https://steel-unik.vercel.app",
     siteName: "Steel Unik",
     title: "Steel Unik — Bastidores para Linhas de Pintura Industrial",
     description:
       "30 anos a fabricar bastidores para linhas de pintura industrial. Prototipagem rápida, produção de 1 a 1.000 unidades. Tier 1.",
+    images: [
+      {
+        url: "https://steel-unik.vercel.app/images/hero/hero-bastidores-01.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Steel Unik — Bastidores para Pintura Industrial",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
